@@ -1,7 +1,3 @@
-res://Player/Player.tscn
-res://Player/Player.gd
-res://main.tscn
 res://world.tscn
-res://world.gd
-res://global/Game.gd
-res://Label.gd
+res://main.tscn
+res://Player/Player.tscn

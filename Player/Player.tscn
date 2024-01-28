@@ -251,6 +251,7 @@ _data = {
 }
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+position = Vector2(229, 201)
 script = ExtResource("1_4opf2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -266,3 +267,10 @@ frame = 1
 libraries = {
 "": SubResource("AnimationLibrary_jhhor")
 }
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(127, -95)
+zoom = Vector2(1.6, 1.6)
+limit_left = 0
+limit_top = 0
+limit_right = 3972
