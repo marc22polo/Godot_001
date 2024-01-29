@@ -1,0 +1,17 @@
+D:\Godot projects\TestRun\.godot\mono\temp\bin\Debug\TestRun.deps.json
+D:\Godot projects\TestRun\.godot\mono\temp\bin\Debug\TestRun.runtimeconfig.json
+D:\Godot projects\TestRun\.godot\mono\temp\bin\Debug\TestRun.dll
+D:\Godot projects\TestRun\.godot\mono\temp\bin\Debug\TestRun.pdb
+D:\Godot projects\TestRun\.godot\mono\temp\bin\Debug\GodotSharp.dll
+D:\Godot projects\TestRun\.godot\mono\temp\bin\Debug\GodotSharpEditor.dll
+D:\Godot projects\TestRun\.godot\mono\temp\obj\Debug\TestRun.csproj.AssemblyReference.cache
+D:\Godot projects\TestRun\.godot\mono\temp\obj\Debug\TestRun.GeneratedMSBuildEditorConfig.editorconfig
+D:\Godot projects\TestRun\.godot\mono\temp\obj\Debug\TestRun.AssemblyInfoInputs.cache
+D:\Godot projects\TestRun\.godot\mono\temp\obj\Debug\TestRun.AssemblyInfo.cs
+D:\Godot projects\TestRun\.godot\mono\temp\obj\Debug\TestRun.csproj.CoreCompileInputs.cache
+D:\Godot projects\TestRun\.godot\mono\temp\obj\Debug\TestRun.csproj.CopyComplete
+D:\Godot projects\TestRun\.godot\mono\temp\obj\Debug\TestRun.dll
+D:\Godot projects\TestRun\.godot\mono\temp\obj\Debug\refint\TestRun.dll
+D:\Godot projects\TestRun\.godot\mono\temp\obj\Debug\TestRun.pdb
+D:\Godot projects\TestRun\.godot\mono\temp\obj\Debug\TestRun.genruntimeconfig.cache
+D:\Godot projects\TestRun\.godot\mono\temp\obj\Debug\ref\TestRun.dll

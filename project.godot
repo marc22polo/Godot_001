@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Game="*res://global/Game.gd"
 
+[dotnet]
+
+project/assembly_name="TestRun"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

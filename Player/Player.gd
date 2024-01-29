@@ -5,7 +5,7 @@ const JUMP_VELOCITY = -300.0
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-
+var died = false
 @onready var anim = get_node("AnimationPlayer");
 
 func _physics_process(delta):
@@ -15,8 +15,13 @@ func _physics_process(delta):
 		
 	var direction = 0
 	if is_on_wall():
-		Game.resetsNo += 1
-		get_tree().reload_current_scene()
+		if not died:
+			anim.play("Death")
+			died = true
+		else:
+			if not anim.is_playing():
+				Game.resetsNo += 1
+				get_tree().reload_current_scene()
 	else:
 		direction = 1
 		
@@ -32,9 +37,9 @@ func _physics_process(delta):
 			anim.play("Run")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-		if velocity.y == 0:
+		if velocity.y == 0 and not died:
 			anim.play("Idle")
-	if velocity.y > 0:
+	if velocity.y > 0 and not died:
 		anim.play("Fall")
 	
 	if direction > 0:
