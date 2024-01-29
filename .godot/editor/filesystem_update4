@@ -1,11 +1,2 @@
 res://world.tscn
-res://global/TestC.cs
-res://Player/Player.tscn
 res://Player/Player.gd
-res://main.tscn
-res://global/utils.cs
-res://world.gd
-res://Label.gd
-res://parallax_background.tscn
-res://ParallaxLayer.gd
-res://parallax_background.gd
