@@ -1,13 +1,13 @@
 [gd_scene load_steps=16 format=3 uid="uid://d4hnkocq2xhn7"]
 
-[ext_resource type="Script" path="res://world.gd" id="1_p3fdj"]
+[ext_resource type="Script" path="res://scenes/world/world.gd" id="1_p3fdj"]
 [ext_resource type="PackedScene" uid="uid://b4wcrftlkl2pf" path="res://Player/Player.tscn" id="1_uwwn1"]
 [ext_resource type="Texture2D" uid="uid://nwxagk6ce3l3" path="res://Resources/SpriteSheet/tileset.png" id="2_q3y1t"]
 [ext_resource type="Texture2D" uid="uid://dkxjop2u7lcaa" path="res://Resources/Sprite/environment/big-crate.png" id="3_a7qpv"]
 [ext_resource type="Texture2D" uid="uid://vta1k4wgvd4b" path="res://Resources/Sprite/environment/block-big.png" id="4_ooa4q"]
 [ext_resource type="Texture2D" uid="uid://rrbqg0rgguc1" path="res://Resources/Sprite/environment/block.png" id="5_b6pg5"]
-[ext_resource type="PackedScene" uid="uid://ps7iauiws40d" path="res://parallax_background.tscn" id="8_fyaed"]
-[ext_resource type="Script" path="res://Label.gd" id="8_updct"]
+[ext_resource type="PackedScene" uid="uid://ps7iauiws40d" path="res://scenes/background/parallax_background.tscn" id="8_fyaed"]
+[ext_resource type="Script" path="res://scenes/world/Label.gd" id="8_updct"]
 [ext_resource type="PackedScene" uid="uid://c4aax4q7oehr5" path="res://objects/Spike/spike.tscn" id="9_qyfuf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_irngm"]

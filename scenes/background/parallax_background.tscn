@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://ps7iauiws40d"]
 
 [ext_resource type="Texture2D" uid="uid://byevfobkt6tf7" path="res://Resources/Sprite/background/back.png" id="1_wvvxn"]
-[ext_resource type="Script" path="res://parallax_background.gd" id="1_yf1f7"]
+[ext_resource type="Script" path="res://scenes/background/parallax_background.gd" id="1_yf1f7"]
 [ext_resource type="Texture2D" uid="uid://llh7e07x5uyj" path="res://Resources/Sprite/background/middle.png" id="2_sv082"]
 
 [node name="ParallaxBackground" type="ParallaxBackground"]

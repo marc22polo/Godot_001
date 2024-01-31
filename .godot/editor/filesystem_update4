@@ -6,3 +6,7 @@ res://objects/Spike/spike.gd
 res://main.tscn
 res://world.gd
 res://global/Game.gd
+res://scenes/world/world.tscn
+res://scenes/main/main.tscn
+res://scenes/world/world.gd
+res://scenes/main/main.gd

@@ -8,4 +8,4 @@ func _input(event):
 
 func _on_finish_line_body_entered(_body):
 	Game.resetsNo = 0
-	get_tree().change_scene_to_file("res://main.tscn")
+	get_tree().change_scene_to_file("res://scenes/main/main.tscn")
