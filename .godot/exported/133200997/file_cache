@@ -1,4 +1,5 @@
-res://Player/Player.tscn::05c990883ac264f7ca771467fe0105ac::1706559024::res://.godot/exported/133200997/export-48b487cb3fbab0e0d627d8f8de2ba1d9-Player.scn
-res://main.tscn::65af29ce68a48c4f7a6d41463e5081cf::1706558688::res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn
-res://parallax_background.tscn::1495b61beddfd04db35f513202a1638f::1706559024::res://.godot/exported/133200997/export-4fa04d50fa23229baa974e189361fa5f-parallax_background.scn
-res://world.tscn::fde72dfbc654d157bea051d0b98072ab::1706560583::res://.godot/exported/133200997/export-76e0adcbc83681695885bae615f516ae-world.scn
+res://Player/Player.tscn::35ccdb4dde69853f2d6236c9e7b54945::1706732507::res://.godot/exported/133200997/export-48b487cb3fbab0e0d627d8f8de2ba1d9-Player.scn
+res://objects/Spike/spike.tscn::53582a2c6622a64fb3a275c730a471b3::1706732507::res://.godot/exported/133200997/export-976a71551cb0dc664eaf140c2aef40cc-spike.scn
+res://scenes/background/parallax_background.tscn::09aa1ed77ab17bea6a760e5ca86f6412::1706732394::res://.godot/exported/133200997/export-5bcf54b73f299825d0f067e0df7b8821-parallax_background.scn
+res://scenes/main/main.tscn::87c88bf8014dba70c5a6cd0a1fac404b::1706732507::res://.godot/exported/133200997/export-f39996a6d27a38698d16421ab974097b-main.scn
+res://scenes/world/world.tscn::e31d7d744742e3c9bb4c5dde0643a18a::1706732534::res://.godot/exported/133200997/export-ff073170850e501e2313129eddbad472-world.scn
