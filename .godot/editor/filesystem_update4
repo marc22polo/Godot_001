@@ -1,12 +1,4 @@
-res://Player/Player.tscn
-res://Player/Player.gd
-res://world.tscn
-res://objects/Spike/spike.tscn
-res://objects/Spike/spike.gd
-res://main.tscn
-res://world.gd
-res://global/Game.gd
 res://scenes/world/world.tscn
+res://Player/Player.gd
 res://scenes/main/main.tscn
-res://scenes/world/world.gd
-res://scenes/main/main.gd
+res://Player/Player.tscn
