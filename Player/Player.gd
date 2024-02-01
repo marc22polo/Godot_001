@@ -6,7 +6,7 @@ const JUMP_VELOCITY = -300.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var current_player_state = Game.player_state.ALIVE
-@onready var anim = $AnimationPlayer
+@onready var anim = $PlayerAnimation
 
 func _physics_process(delta):
 	# Add the gravity.

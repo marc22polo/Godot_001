@@ -1,15 +1,15 @@
 extends Control
 
 func _ready():
-	$AnimationPlayer.play("RESET")
+	$PauseAnimation.play("RESET")
 
 func resume():
 	get_tree().paused = false
-	$AnimationPlayer.play_backwards("blur")
+	$PauseAnimation.play_backwards("blur")
 
 func pause():
 	get_tree().paused = true
-	$AnimationPlayer.play("blur")
+	$PauseAnimation.play("blur")
 	
 func handle_esc():
 	if Input.is_action_just_pressed("esc") and !get_tree().paused:

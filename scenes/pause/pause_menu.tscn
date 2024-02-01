@@ -112,7 +112,7 @@ text = "Restart"
 layout_mode = 2
 text = "Quit"
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+[node name="PauseAnimation" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_ih8at")
 }
