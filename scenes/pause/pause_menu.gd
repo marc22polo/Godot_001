@@ -4,12 +4,14 @@ func _ready():
 	$PauseAnimation.play("RESET")
 
 func resume():
-	get_tree().paused = false
-	$PauseAnimation.play_backwards("blur")
+	if get_tree().paused:
+		get_tree().paused = false
+		$PauseAnimation.play_backwards("blur")
 
 func pause():
-	get_tree().paused = true
-	$PauseAnimation.play("blur")
+	if !get_tree().paused:
+		get_tree().paused = true
+		$PauseAnimation.play("blur")
 	
 func handle_esc():
 	if Input.is_action_just_pressed("esc") and !get_tree().paused:
