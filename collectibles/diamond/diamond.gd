@@ -8,3 +8,4 @@ func _on_body_entered(body):
 		tween_mod.tween_property(self, "modulate:a", 0, 0.2)
 		tween_pos.tween_callback(queue_free)
 		tween_mod.tween_callback(queue_free)
+		Game.diamonds += 1
