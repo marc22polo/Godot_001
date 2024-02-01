@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://d4hnkocq2xhn7"]
+[gd_scene load_steps=29 format=3 uid="uid://d4hnkocq2xhn7"]
 
 [ext_resource type="Script" path="res://scenes/world/world.gd" id="1_p3fdj"]
 [ext_resource type="PackedScene" uid="uid://b4wcrftlkl2pf" path="res://Player/Player.tscn" id="1_uwwn1"]
@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://dsl5mx6lh4ov1" path="res://Resources/Sprite/environment/bush.png" id="16_jtawp"]
 [ext_resource type="Texture2D" uid="uid://dwssy04htylgf" path="res://Resources/Sprite/environment/shrooms.png" id="17_ljg0l"]
 [ext_resource type="Texture2D" uid="uid://dp6pyx73ar4td" path="res://Resources/Sprite/environment/rock-1.png" id="18_4715s"]
+[ext_resource type="PackedScene" uid="uid://dkai10ouxi5e" path="res://scenes/pause/pause_menu.tscn" id="18_geoic"]
 [ext_resource type="Texture2D" uid="uid://ji7e3pm6tspe" path="res://Resources/Sprite/environment/rock.png" id="19_4hfvm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_irngm"]
@@ -613,37 +614,6 @@ position = Vector2(1388, 252)
 [node name="Spike12" parent="." instance=ExtResource("9_qyfuf")]
 position = Vector2(1404, 252)
 
-[node name="Player" parent="." instance=ExtResource("1_uwwn1")]
-position = Vector2(-331, 41)
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="LblResets" type="Label" parent="CanvasLayer"]
-offset_left = 8.0
-offset_top = 5.0
-offset_right = 80.0
-offset_bottom = 28.0
-text = "Retries: 0"
-script = ExtResource("8_updct")
-
-[node name="LblFinish" type="Label" parent="CanvasLayer"]
-visible = false
-offset_right = 40.0
-offset_bottom = 23.0
-text = "Congrats"
-
-[node name="FinishLine" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="FinishLine"]
-editor_description = "Finish line"
-position = Vector2(3644, 48)
-shape = SubResource("RectangleShape2D_ye2tg")
-debug_color = Color(0.337255, 0.615686, 0.27451, 0.419608)
-
-[node name="ParallaxBackground" parent="." instance=ExtResource("8_fyaed")]
-offset = Vector2(0, 50)
-transform = Transform2D(1, 0, 0, 1, 0, 50)
-
 [node name="Tree" type="Sprite2D" parent="."]
 position = Vector2(172, 41)
 texture = ExtResource("12_erhif")
@@ -703,5 +673,32 @@ texture = ExtResource("17_ljg0l")
 [node name="Skulls2" type="Sprite2D" parent="."]
 position = Vector2(2644, 60)
 texture = ExtResource("15_v605o")
+
+[node name="Player" parent="." instance=ExtResource("1_uwwn1")]
+position = Vector2(-331, 41)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("18_geoic")]
+
+[node name="LblResets" type="Label" parent="CanvasLayer"]
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 80.0
+offset_bottom = 28.0
+text = "Retries: 0"
+script = ExtResource("8_updct")
+
+[node name="FinishLine" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FinishLine"]
+editor_description = "Finish line"
+position = Vector2(3644, 48)
+shape = SubResource("RectangleShape2D_ye2tg")
+debug_color = Color(0.337255, 0.615686, 0.27451, 0.419608)
+
+[node name="ParallaxBackground" parent="." instance=ExtResource("8_fyaed")]
+offset = Vector2(0, 50)
+transform = Transform2D(1, 0, 0, 1, 0, 50)
 
 [connection signal="body_entered" from="FinishLine" to="." method="_on_finish_line_body_entered"]
