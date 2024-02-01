@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://d4hnkocq2xhn7"]
+[gd_scene load_steps=31 format=3 uid="uid://d4hnkocq2xhn7"]
 
 [ext_resource type="Script" path="res://scenes/world/world.gd" id="1_p3fdj"]
 [ext_resource type="PackedScene" uid="uid://b4wcrftlkl2pf" path="res://Player/Player.tscn" id="1_uwwn1"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://dp6pyx73ar4td" path="res://Resources/Sprite/environment/rock-1.png" id="18_4715s"]
 [ext_resource type="PackedScene" uid="uid://dkai10ouxi5e" path="res://scenes/pause/pause_menu.tscn" id="18_geoic"]
 [ext_resource type="Texture2D" uid="uid://ji7e3pm6tspe" path="res://Resources/Sprite/environment/rock.png" id="19_4hfvm"]
+[ext_resource type="PackedScene" uid="uid://dn6j23o4tuet8" path="res://collectibles/diamond/diamond.tscn" id="21_3kuvg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_irngm"]
 resource_name = "<null>"
@@ -572,6 +573,10 @@ sources/3 = SubResource("TileSetAtlasSource_1kmrc")
 sources/4 = SubResource("TileSetAtlasSource_niayw")
 sources/5 = SubResource("TileSetAtlasSource_cg5y8")
 
+[sub_resource type="LabelSettings" id="LabelSettings_ibscc"]
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.572549)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ye2tg"]
 size = Vector2(140, 95)
 
@@ -685,6 +690,7 @@ offset_top = 5.0
 offset_right = 80.0
 offset_bottom = 28.0
 text = "Retries: 0"
+label_settings = SubResource("LabelSettings_ibscc")
 script = ExtResource("8_updct")
 
 [node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("18_geoic")]
@@ -700,5 +706,8 @@ debug_color = Color(0.337255, 0.615686, 0.27451, 0.419608)
 [node name="ParallaxBackground" parent="." instance=ExtResource("8_fyaed")]
 offset = Vector2(0, 50)
 transform = Transform2D(1, 0, 0, 1, 0, 50)
+
+[node name="Area2D" parent="." instance=ExtResource("21_3kuvg")]
+position = Vector2(1544, 55)
 
 [connection signal="body_entered" from="FinishLine" to="." method="_on_finish_line_body_entered"]

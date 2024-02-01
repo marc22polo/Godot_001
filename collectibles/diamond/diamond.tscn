@@ -1,5 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://dn6j23o4tuet8"]
+[gd_scene load_steps=9 format=3 uid="uid://dn6j23o4tuet8"]
 
+[ext_resource type="Script" path="res://collectibles/diamond/diamond.gd" id="1_g7tvc"]
 [ext_resource type="Texture2D" uid="uid://bv7208puthexj" path="res://Resources/Sprite/gem/gem-1.png" id="1_tpm5v"]
 [ext_resource type="Texture2D" uid="uid://co8kn110l03jg" path="res://Resources/Sprite/gem/gem-2.png" id="2_fkrgj"]
 [ext_resource type="Texture2D" uid="uid://kjdtjgnoqkfd" path="res://Resources/Sprite/gem/gem-3.png" id="3_eqimg"]
@@ -28,14 +29,19 @@ animations = [{
 "texture": ExtResource("5_jwuhw")
 }],
 "loop": true,
-"name": &"default",
+"name": &"shine",
 "speed": 5.0
 }]
 
 [node name="Area2D" type="Area2D"]
+script = ExtResource("1_g7tvc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_yc6gk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_5bov7")
+animation = &"shine"
+autoplay = "shine"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -7,3 +7,4 @@ res://scenes/pause/pause_menu.gdshader
 res://scenes/pause/pause_menu.gd
 res://scenes/world/world.gd
 res://collectibles/diamond/diamond.tscn
+res://collectibles/diamond/diamond.gd
