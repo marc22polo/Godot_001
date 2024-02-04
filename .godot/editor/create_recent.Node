@@ -1,4 +1,5 @@
 AnimationPlayer
+Label
 AnimatedSprite2D
 CollisionShape2D
 Area2D
@@ -10,5 +11,4 @@ Sprite2D
 StaticBody2D
 ParallaxLayer
 ParallaxBackground
-Label
 CanvasLayer

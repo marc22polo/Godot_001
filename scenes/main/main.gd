@@ -1,5 +1,7 @@
 extends Node2D
 
+func _ready():
+	$AnimationPlayer.play("beat")
 
 func _on_b_quit_pressed():
 	get_tree().quit();

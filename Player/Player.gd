@@ -21,7 +21,7 @@ func _physics_process(delta):
 		direction = 1
 		
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and (current_player_state == Game.player_state.ALIVE):
 		velocity.y = JUMP_VELOCITY
 		anim.play("Jump")
 		

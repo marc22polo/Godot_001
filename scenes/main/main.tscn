@@ -1,23 +1,87 @@
-[gd_scene load_steps=2 format=3 uid="uid://bos6ey5esuopf"]
+[gd_scene load_steps=7 format=3 uid="uid://bos6ey5esuopf"]
 
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_ccfls"]
+[ext_resource type="Texture2D" uid="uid://byevfobkt6tf7" path="res://Resources/Sprite/background/back.png" id="2_821ts"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2bvns"]
+font_size = 65
+shadow_size = 3
+shadow_color = Color(0, 0, 0, 0.572549)
+
+[sub_resource type="Animation" id="Animation_mmuv1"]
+resource_name = "beat"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:label_settings:font_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [44, 65, 44]
+}
+
+[sub_resource type="Animation" id="Animation_wfstt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:label_settings:font_size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [65]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r72hu"]
+_data = {
+"RESET": SubResource("Animation_wfstt"),
+"beat": SubResource("Animation_mmuv1")
+}
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_ccfls")
 
+[node name="Back" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(3, 2.7)
+texture = ExtResource("2_821ts")
+
 [node name="bPlay" type="Button" parent="."]
-offset_left = 448.0
-offset_top = 96.0
-offset_right = 648.0
-offset_bottom = 192.0
+offset_left = 476.0
+offset_top = 217.0
+offset_right = 676.0
+offset_bottom = 313.0
 text = "PLAY"
 
 [node name="bQuit" type="Button" parent="."]
-offset_left = 448.0
+offset_left = 476.0
 offset_top = 352.0
-offset_right = 648.0
+offset_right = 676.0
 offset_bottom = 448.0
 text = "QUIT"
+
+[node name="Label" type="Label" parent="."]
+offset_left = 241.0
+offset_top = 52.0
+offset_right = 910.0
+offset_bottom = 156.0
+text = "GD RIPOFF"
+label_settings = SubResource("LabelSettings_2bvns")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_r72hu")
+}
 
 [connection signal="pressed" from="bPlay" to="." method="_on_b_play_pressed"]
 [connection signal="pressed" from="bQuit" to="." method="_on_b_quit_pressed"]
